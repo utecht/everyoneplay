@@ -19,7 +19,9 @@ def get_highest():
 # here we need to a sleeping loop that calls xkeysend on get_highest()
 while True:
     key = get_highest()
-    os.system("xdotool key '{}'".format(key))
+    if key:
+        print(key)
+        os.system("DISPLAY=:0 xdotool key '{}'".format(key.decode("utf-8")))
     time.sleep(.5)
 
 

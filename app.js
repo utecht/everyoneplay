@@ -2,7 +2,7 @@ var app = require('http').createServer(handler)
   , io = require('socket.io').listen(app)
   , fs = require('fs')
 
-app.listen(4000);
+app.listen(4000, "0.0.0.0");
 
 function handler (req, res) {
   if(req.url === '/'){

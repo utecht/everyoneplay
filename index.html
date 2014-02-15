@@ -3,7 +3,7 @@
         <script type="text/javascript" src="/socket.io/socket.io.js"></script>
         <script type="text/javascript" src="jquery.min.js"></script>
         <script type="text/javascript">
-          var socket = io.connect('http://localhost:4000');
+          var socket = io.connect('http://9volt-developers.com:4000');
           $(document).ready(function(){
               $('.buttons').click(function(e){
                 console.log(e);
@@ -14,7 +14,11 @@
         </script>
     </head>
     <body>
-        <div id="A" class="buttons">A</div>
-        <div id="B" class="buttons">B</div>
+        <input type='button' id="x" class="buttons">A</input>
+        <input type='button' id="z" class="buttons">B</input>
+        <input type='button' id="Up" class="buttons">Up</input>
+        <input type='button' id="Down" class="buttons">Down</input>
+        <input type='button' id="Left" class="buttons">Left</input>
+        <input type='button' id="Right" class="buttons">Right</input>
     </body>
 </html>
