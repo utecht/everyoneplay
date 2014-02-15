@@ -4,9 +4,12 @@
         <script type="text/javascript" src="jquery.min.js"></script>
         <script type="text/javascript">
           var socket = io.connect('http://localhost:4000');
-          $('.buttons').click(function(e){
-            console.log(e);
-            socket.emit('button_pressed', button);
+          $(document).ready(function(){
+              $('.buttons').click(function(e){
+                console.log(e);
+                var button = e.target.id;
+                socket.emit('button_pressed', button);
+              });
           });
         </script>
     </head>
