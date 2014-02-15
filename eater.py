@@ -14,5 +14,7 @@ def get_highest():
             highest_num = int(buttons[b])
     return highest
 
+# here we need to a sleeping loop that calls xkeysend on get_highest()
+
 if __name__ == '__main__':
     print(get_highest())
