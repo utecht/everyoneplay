@@ -21,8 +21,10 @@ while True:
     key = get_highest()
     if key:
         print(key)
-        os.system("DISPLAY=:0 xdotool key '{}'".format(key.decode("utf-8")))
-    time.sleep(.5)
+        os.system("DISPLAY=:0 xdotool keydown '{}'".format(key.decode("utf-8")))
+    time.sleep(.1)
+    if key:
+        os.system("DISPLAY=:0 xdotool keyup '{}'".format(key.decode("utf-8")))
 
 
 if __name__ == '__main__':
